@@ -1,29 +1,79 @@
-.container__content{
-
+/* Estilos para o container principal */
+.container__content {
   width: 100%;
   height: 100vh;
-
-  margin-top: 20px;
-
   display: flex;
   flex-direction: column;
-
   align-items: center;
+  margin-top: 20px;
 }
 
-.content__cover > img{
-  border:5px solid rgb(144, 144, 144);
+/* Estilos para a capa da imagem */
+.content__cover > img {
+  border: 5px solid var(--accent-100);
   border-radius: 5px;
   width: 500px;
   min-width: 500px;
   height: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionando sombra */
+  transition: transform 0.3s ease; /* Efeito de transição para o hover */
 }
 
-.content__description{
+/* Efeito de hover para a capa */
+.content__cover > img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para a descrição */
+.content__description {
   margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden; /* Para esconder a parte arredondada dos elementos filho */
 }
 
-.content__description > p{
+/* Estilos para o texto da descrição */
+.content__description > p {
   margin-top: 20px;
-  color: rgb(198, 197, 197);
+  color: var(--primary-300);
+  transition: color 0.3s ease; /* Efeito de transição para o hover */
+}
+
+/* Animação de fade in para a capa */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animação de slide up para a descrição */
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Aplicando animações */
+.content__cover > img {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.content__description {
+  animation: slideUp 1s ease-in-out forwards;
+}
+
+/* Adicionando regras de responsividade */
+@media screen and (max-width: 600px) {
+  .content__cover > img {
+    width: 90%;
+    height: auto;
+    min-width: unset;
+  }
 }

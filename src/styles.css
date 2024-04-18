@@ -1,14 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+:root{
+
+  --primary-100:#c21d03;
+  --primary-200:#fd5732;
+  --primary-300:#ffb787;
+  --accent-100:#393939;
+  --accent-200:#bebebe;
+  --text-100:#232121;
+  --text-200:#4b4848;
+  --bg-100:#fbfbfb;
+  --bg-200:#f1f1f1;
+  --bg-300:#c8c8c8;
+
+}
 *{
   margin:0;
   padding:0;
   box-sizing: border-box;
-  background-color: #111111;
+  background-color: var(--bg-300);
   color:white;
   font-family: 'Open Sans', sans-serif;
 }
-
+h1{
+  color:  var(--primary-300);
+}
 a{
   text-decoration: none;
+  color: var(--primary-100);
 }

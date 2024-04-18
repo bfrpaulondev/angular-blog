@@ -9,3 +9,51 @@
 }
 
 
+/* Animação para o título do menu */
+.menu-title-animation {
+  animation: fadeInUp 1s ease-out;
+}
+
+/* Animação para o card grande */
+.big-card-animation {
+  animation: slideInLeft 1s ease-out;
+}
+
+/* Animação para os cards pequenos */
+.small-card-animation {
+  animation: slideInRight 1s ease-out;
+}
+
+/* Definição das animações */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
